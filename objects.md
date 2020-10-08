@@ -70,3 +70,12 @@ public class Elephant extends Mammal { // DOES NOT COMPILE
 
 the Mamal class only has one constructor and does not have a no-argument constructor by default nor explicity. So, the Elephant inherit the Mamal and MUST explicity calls the method from its super with parameters.
 
+
+
+## Destructing the Object: GC
+
+An object remains on the heap until it is no longer reachable. An object is no longer reacheble when one of two situations occurs:
+
+ ■ The object no longer has any references pointing to it.
+ 
+ ■ All references to the object have gone out of scope.
