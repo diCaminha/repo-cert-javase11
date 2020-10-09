@@ -8,6 +8,47 @@ Define and use fields and methods, including instance, static and overloaded met
 - you can only have 1 vararg per method
   
 ```java
-public void walk1(int... nums) {}
-public void walk3(int... nums, int start) { } //DOES NOT COMPILE
+ public static void walk(int start, int... nums) {
+    System.out.println(nums.length);
+}
+
+public static void main(String[] args) {
+    walk(1); // 0
+    walk(1, 2); // 1
+}
 ```
+
+## Applying access modifiers
+
+### Private
+
+only code in the same class can call **private method** or access **private fields**
+
+### Default
+
+Also known as Private package, it can only be called by others in the same package.
+
+It's the deefault access modifiers of methods if it is not explicit informed by the code.
+
+
+### Protected
+
+Allows everything that Default does, but more! It also lets the children (extended classes) to access and call methods.
+
+```java
+public class Bird {
+    protected void floatInWater() {}
+}
+
+public class Gosling extends Bird {
+    public void swim() {
+        floatInWater();
+    }
+}
+```
+
+## Public
+
+It's open for all classes from everywhere.
+
+
