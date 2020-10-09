@@ -51,4 +51,29 @@ public class Gosling extends Bird {
 
 It's open for all classes from everywhere.
 
+## Designing Static Methods and Fields
+
+So far, we've being looking at instance methods. But exists static methods, the ones that does not require a instance of the class to be called.
+
+- It's shared among all users of the class.
+
+- static vs instance:
+    A static member CANNOT call an instance member.
+
+    common mistake:
+    ```java
+        public class Static {
+            private String name = "Static class";
+            public static void first() { }
+            public static void second() { }
+            public void third() { System.out.println(name); }
+            public static void main(String args[]) {
+                first();
+                second();
+                third(); // DOES NOT COMPILE
+        } }
+    ```
+
+## Overloading Methods
+
 
